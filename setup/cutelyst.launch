@@ -1,0 +1,12 @@
+#!/bin/bash -ex
+
+current_dir=`dirname $0`
+cd $current_dir
+source ../env
+
+nohup $BUILD_PATH/bin/cutelyst-wsgi2 \
+  -a $BUILD_PATH/lib/$CUTELYST_APP_FILE \
+  --http-socket 0.0.0.0:$APP_PORT \
+  --pidfile /home/$APP_USER/$CUTELYST_APP_FILE.pid \
+  > "$APP_PATH/log/application.log" 2>&1 \
+  &

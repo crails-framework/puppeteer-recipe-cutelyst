@@ -1,0 +1,8 @@
+if [[ -f "$APP_PATH/runtime/restore.sh" ]] ; then
+  cd "$APP_PATH/runtime"
+  ./restore.sh
+else
+  echo "No default strategy for Cutelyst restore"
+  exit -1
+fi
+
