@@ -13,6 +13,7 @@ apt-get install -y \
   build-essential \
   qtbase5 \
   qtdeclarative5 \
+  wget \
   rsync
 
 if [[ ! -z "$REQUIRE_PACKAGES" ]] ; then
