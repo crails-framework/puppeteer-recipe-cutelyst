@@ -2,7 +2,7 @@
 
 source ./variables 2> /dev/null
 
-logfile="$APP_PATH/runtime/log/application.log"
+logfile="$APP_PATH/log/application.log"
 total_lines=`wc -l "$logfile" | cut -d' ' -f1`
 extract_lines=500
 
