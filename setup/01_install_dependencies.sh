@@ -11,8 +11,7 @@ apt-get update
 
 apt-get install -y \
   build-essential \
-  qtbase5 \
-  qtdeclarative5 \
+  qt5-default \
   wget \
   rsync
 
