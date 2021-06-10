@@ -4,6 +4,7 @@ source ./variables 2> /dev/null
 
 mkdir -p "$APP_PATH"
 mkdir -p "$APP_PATH/runtime"
+mkdir -p "$APP_PATH/log"
 
 bash cutelyst.env   > "$APP_PATH/env.puppet"
 cp cutelyst.launch "$APP_PATH/runtime/launch.sh"
