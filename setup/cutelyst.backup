@@ -2,6 +2,6 @@ if [[ -f "$APP_PATH/runtime/backup.sh" ]] ; then
   cd "$APP_PATH/runtime"
   ./backup.sh
 else
-  echo "No default strategy for Cutelyst backup"
-  exit -1
+  mongodump --db "$APP_DB_NAME" --out "$BACKUP_DIR"
+  cp "$APP_PATH/env" "$BACKUP_DIR/env"
 fi

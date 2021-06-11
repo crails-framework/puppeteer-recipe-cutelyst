@@ -2,7 +2,7 @@ if [[ -f "$APP_PATH/runtime/restore.sh" ]] ; then
   cd "$APP_PATH/runtime"
   ./restore.sh
 else
-  echo "No default strategy for Cutelyst restore"
-  exit -1
+  mongorestore --db "$APP_DB_NAME" "$BACKUP_DIR"
+  cp "$BACKUP_DIR/env" "$APP_PATH/env"
 fi
 
