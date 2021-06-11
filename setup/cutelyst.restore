@@ -2,7 +2,7 @@ if [[ -f "$APP_PATH/runtime/restore.sh" ]] ; then
   cd "$APP_PATH/runtime"
   ./restore.sh
 else
-  mongorestore --db "$APP_DB_NAME" "$BACKUP_DIR"
+  mongorestore --drop --nsInclude "$APP_DB_NAME.*" "$BACKUP_DIR"
   cp "$BACKUP_DIR/env" "$APP_PATH/env"
 fi
 
