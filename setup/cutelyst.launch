@@ -4,7 +4,7 @@ current_dir=`dirname $0`
 cd $current_dir
 source ../env
 
-nohup $RUNTIME_PATH/bin/cutelyst-wsgi2 \
+nohup $RUNTIME_PATH/bin/$CUTELYST_SERVER_BINARY \
   -a $RUNTIME_PATH/lib/$CUTELYST_APP_FILE \
   --http-socket 0.0.0.0:$APP_PORT \
   --pidfile /home/$APP_USER/$CUTELYST_APP_FILE.pid \
