@@ -1,6 +1,3 @@
 #!/bin/bash -ex
 
-source ./variables 2> /dev/null
-
-cd "$APP_PATH/runtime"
-su $APP_USER -c ./launch.sh
+systemctl start $1.service

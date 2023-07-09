@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-source ./variables 2> /dev/null
+source /usr/share/crails-deploy/$1 2> /dev/null
 
-logfile="$APP_PATH/log/application.log"
+logfile="/var/log/$1/$APPLICATION_NAME.log"
 total_lines=`wc -l "$logfile" | cut -d' ' -f1`
 extract_lines=500
 
